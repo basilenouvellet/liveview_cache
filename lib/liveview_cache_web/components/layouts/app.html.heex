@@ -1,32 +1,44 @@
-<header class="px-4 sm:px-6 lg:px-8">
-  <div class="flex items-center justify-between border-b border-zinc-100 py-3 text-sm">
-    <div class="flex items-center gap-4">
-      <a href="/">
-        <img src={~p"/images/logo.svg"} width="36" />
-      </a>
-      <p class="bg-brand/5 text-brand rounded-full px-2 font-medium leading-6">
-        v<%= Application.spec(:phoenix, :vsn) %>
+<header class="p-4 sm:p-6 lg:p-8 select-none">
+  <div class="flex items-baseline justify-between">
+    <div class="flex items-center gap-2">
+      <p class="font-bold text-lg">LiveView Cache</p>
+
+      <p class="bg-primary-600/10 text-primary-600 rounded-full px-2 text-sm font-semibold leading-6">
+        demo
       </p>
     </div>
-    <div class="flex items-center gap-4 font-semibold leading-6 text-zinc-900">
-      <a href="https://twitter.com/elixirphoenix" class="hover:text-zinc-700">
-        @elixirphoenix
+
+    <div class="flex items-baseline gap-6 font-semibold leading-6 text-dark-900">
+      <a
+        target="_blank"
+        href="https://twitter.com/basilenouvellet"
+        class="hover:bg-primary-700/10 py-1.5 px-4 rounded-full transition-colors"
+      >
+        @basilenouvellet
       </a>
-      <a href="https://github.com/phoenixframework/phoenix" class="hover:text-zinc-700">
+
+      <a
+        target="_blank"
+        href="https://github.com/basilenouvellet/liveview_cache"
+        class="hover:bg-primary-700/10 py-1.5 px-4 rounded-full transition-colors"
+      >
         GitHub
       </a>
+
       <a
-        href="https://hexdocs.pm/phoenix/overview.html"
-        class="rounded-lg bg-zinc-100 px-2 py-1 hover:bg-zinc-200/80"
+        href="/"
+        class="bg-primary-600 hover:bg-primary-700 text-dark-50 py-1.5 px-4 rounded-full transition-colors"
       >
-        Get Started <span aria-hidden="true">&rarr;</span>
+        Refresh
       </a>
     </div>
   </div>
 </header>
+
 <main class="px-4 py-20 sm:px-6 lg:px-8">
   <div class="mx-auto max-w-2xl">
     <.flash_group flash={@flash} />
+
     <%= @inner_content %>
   </div>
 </main>

@@ -17,7 +17,7 @@ defmodule LiveviewCacheWeb.Router do
   scope "/", LiveviewCacheWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", HomeLive
   end
 
   # Other scopes may use custom stacks.

@@ -1,18 +1,29 @@
-# LiveviewCache
+# Liveview Cache
 
-To start your Phoenix server:
+This is a **very experimental** project on how to achieve **client caching for LiveView**.
 
-  * Run `mix setup` to install and setup dependencies
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+Still in an exploring phase for now, a proper Elixir library could come out of this at some point.
+
+The demo displays a list of the most starred Github repositories, fetched from the Github GraphQL API.
+
+## Next steps
+
+- [x] fetch data from Github
+- [ ] cache Github data on the client:
+  - [ ] cache last socket state in local storage on client
+  - [ ] send it as params on first socket connection
+  - [ ] populate liveview assigns with params (during dead render)
+- [ ] run benchmarks about loading performance
+- [ ] extract an abstraction out of this (LiveView hook? JS hook? just functions?)
+- [ ] package it as a proper Elixir library
+
+## Setup
+
+- install and setup dependencies: `mix setup`
+- start Phoenix endpoint: `iex -S mix phx.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+## Contributing
 
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+Contributions are welcome ✌️
